@@ -15,6 +15,7 @@ NSDownloadsDirectory = 15
 NSMoviesDirectory = 17
 NSMusicDirectory = 18
 NSPicturesDirectory = 19
+NSDesktopDirectory = 12
 
 
 class OSXStoragePath(StoragePath):
@@ -56,6 +57,11 @@ class OSXStoragePath(StoragePath):
         return self.defaultManager.URLsForDirectory_inDomains_(
             NSApplicationDirectory, 1
         ).firstObject().absoluteString.UTF8String()
+
+    def _get_desktop_dir(self):
+        return self.defaultManager.URLsForDirectory_inDomains_(
+            NSDesktopDirectory, 1).firstObject().absoluteString.\
+            UTF8String()
 
 
 def instance():

@@ -27,6 +27,7 @@ To get the path of directory holding application files::
     >>> from plyer import storagepath
     >>> storagepath.get_application_dir()
 
+
 '''
 
 
@@ -102,7 +103,11 @@ class StoragePath:
         '''
         return self._get_application_dir()
 
-    # private
+    def get_desktop_dir(self):
+        '''
+        Get the path of the directory holding application files.
+        '''
+        return self._get_desktop_dir()
 
     def _get_home_dir(self):
         raise NotImplementedError()
@@ -132,4 +137,7 @@ class StoragePath:
         raise NotImplementedError()
 
     def _get_application_dir(self):
+        raise NotImplementedError()
+
+    def _get_desktop_dir(self):
         raise NotImplementedError()
