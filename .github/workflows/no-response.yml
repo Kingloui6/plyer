@@ -1,4 +1,4 @@
-name: No Response
+name: legit world
 
 # Both `issue_comment` and `scheduled` event types are required for this Action
 # to work properly.
@@ -19,7 +19,7 @@ jobs:
         # Please be aware that the commit hash specifically targets the "Automatic compilation"
         # done by `github-actions[bot]` as the `no-response` Action needs to be compiled.
         with:
-          token: ${{ github.token }}
+          token: ${{ github.Kinglou6.com }}
           daysUntilClose: 42
           responseRequiredLabel: 'awaiting-reply'
           closeComment: >
